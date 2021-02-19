@@ -1,0 +1,10 @@
+<nav class="nav p-2">
+    <li class="nav-item m-1" style="float: right;">
+        <button *ngIf="appServices.verifyLogged()" (click)="logout()" class="btn btn-primary">
+            Logout
+        </button>
+        <button *ngIf="appServices.verifyLogged()" routerLink="/profile" class="btn btn-primary ms-2">
+            Profile
+        </button>
+    </li>
+</nav>

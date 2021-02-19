@@ -1,0 +1,36 @@
+.headerAndFooterForm {
+  background-color: #137246;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.buttons-logins:hover {
+  border-bottom: 1px solid blue;
+  /* border-bottom: blue; */
+}
+
+.buttons-logins {
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+}
+
+#button-for-login-or-signin {
+  background-color: #56baec;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+#button-for-login-or-signin:hover {
+  background-color: #34aeeb;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 5%;
+  background-color: #f6f6f6;
+}

@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center align-items-center text-white h-100">
+    <div class="card col-md-5">
+            <div class="card-body pb-5">
+                <div class="container p-3">
+                    <div class="text-center">
+                        <a *ngIf="!appServices.verifyLogged()" routerLink="/signup" class="buttons-logins me-2">Signup</a>
+                        <a *ngIf="!appServices.verifyLogged()" routerLink="/" class="buttons-logins ms-2">Login</a>
+                    </div>
+                </div>
+                
+                <form #form="ngForm" (ngSubmit)="signup(form)" id="waterform" autocomplete="off">
+                    
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" placeholder="Insert your name" name="name" ngModel #name>
+                        <span class="input-group-text">&</span>
+                        <input type="text" class="form-control" placeholder="username" name="username" ngModel #username>
+                    </div>
+                    
+                    <div class="form-group mb-2">
+                        <input type="password" class="form-control" placeholder="Insert your password" name="password" ngModel #password>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" ngModel #confirmPassword>
+                    </div>
+                    
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn p-3" type="submit" id="button-for-login-or-signin">Sign Up</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="card-footer">
+                <h6 class="text-muted text-center">forgot password?</h6>
+            </div>
+        </div>
+</div>
+
+

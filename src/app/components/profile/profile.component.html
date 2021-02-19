@@ -1,0 +1,57 @@
+<div class="m-2">
+    <button *ngIf="add == false" (click)="add = true" class="btn btn-success ms-2 material-icons">
+        add
+</button>
+<div *ngIf="add && appServices.verifyLogged()" class="col-md-4 mb-3 d-flex">
+    <div class="card bg-success text-center text-white">
+        <span (click)="add = false" class="material-icons" style="cursor: pointer;">
+            clear
+        </span>
+        <h6>Add new Task</h6>
+        <div class="card-body">
+            <form autocomplete="off">
+                <div class="form-group  mb-1">
+                    <input class="form-control" type="text" name="name" placeholder="Name of Your Task" [(ngModel)]="name">
+                </div>
+                <div class="form-group  mb-1">
+                    <input class="form-control" type="text" name="description" placeholder="Description of Your Task" [(ngModel)]="description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-control" (click)="saveTask()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+
+    <div class="row mt-1">
+
+       
+        <div class="col-md-4 mb-1" *ngFor="let task of allTask">
+            <div class="card bg-primary text-white">
+                <div class="card-header d-flex justify-content-between">
+                    {{task.name}}
+                        <div>
+                            <span (click)="deleteTask(task._id)" class="material-icons" style="cursor: pointer;">
+                                clear
+                            </span>
+                            <span (click)="editTask(task.name, task.description, task._id)" class="material-icons" style="cursor: pointer;">
+                                create
+                            </span>
+                        </div>
+                </div>
+                <div class="card-body">
+                    {{task.description}}
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="row">
+        
+    </div>
+</div>
